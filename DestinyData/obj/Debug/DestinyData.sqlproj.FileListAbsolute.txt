@@ -1,0 +1,9 @@
+C:\Users\Dimitri\Documents\Visual Studio 2015\Projects\TestElo\DestinyData\bin\Debug\DestinyData.dacpac
+C:\Users\Dimitri\Documents\Visual Studio 2015\Projects\TestElo\DestinyData\bin\Debug\DestinyData.dll
+C:\Users\Dimitri\Documents\Visual Studio 2015\Projects\TestElo\DestinyData\bin\Debug\DestinyData.pdb
+C:\Users\Dimitri\Documents\Visual Studio 2015\Projects\TestElo\DestinyData\obj\Debug\Model.xml
+C:\Users\Dimitri\Documents\Visual Studio 2015\Projects\TestElo\DestinyData\obj\Debug\refactor.xml
+C:\Users\Dimitri\Documents\Visual Studio 2015\Projects\TestElo\DestinyData\obj\Debug\postdeploy.sql
+C:\Users\Dimitri\Documents\Visual Studio 2015\Projects\TestElo\DestinyData\obj\Debug\predeploy.sql
+C:\Users\Dimitri\Documents\Visual Studio 2015\Projects\TestElo\DestinyData\obj\Debug\DestinyData.dll
+C:\Users\Dimitri\Documents\Visual Studio 2015\Projects\TestElo\DestinyData\obj\Debug\DestinyData.pdb
