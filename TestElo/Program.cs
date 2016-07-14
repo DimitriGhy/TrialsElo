@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace TestElo
 {
@@ -8,19 +9,33 @@ namespace TestElo
     {
         const string trialsMode = "14";
         const string rootPath = @"c:\users\public\TrialsElo\";
+        const string apiKey = "489f18cf6b8c4881bc99c3776950538f";
+
+
         static void Main(string[] args)
         {
+            string membershipId = "4611686018439432963";
+            string characterId = "2305843009290018353";
+
+            var x = getBungieActivites(membershipId, characterId, trialsMode, "10", "0");
+
+
+            dynamic item = Newtonsoft.Json.JsonConvert.DeserializeObject(x.Result);
+
+
+
+            //CharacterData(membershipId);
+
             //get the leaderboard of PS4
-            int page = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                GetLeaderBoardPS4(5);
-            }
-            
+            //int page = 0;
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    GetLeaderBoardPS4(5);
+            //}
+
             //push the data in SQL
 
 
-            string membershipId;
             Console.WriteLine("Enter username...");
             var username = Console.ReadLine();
             if (!string.IsNullOrEmpty(username))
@@ -29,6 +44,7 @@ namespace TestElo
                 GetElo(membershipId);
                 GetEloHistory(membershipId, "2016-06-09", "2016-07-11");
                 WeekData(membershipId);
+                CharacterData(membershipId);
             }
             Console.ReadLine();
             //
@@ -57,7 +73,6 @@ namespace TestElo
                 }
             }
         }
-
 
         //http://api.guardian.gg/leaderboard/2/14/1
         static void GetLeaderBoardPS4(int page, string mode = "14")
@@ -144,7 +159,8 @@ namespace TestElo
             // Uses JSON.NET - http://www.nuget.org/packages/Newtonsoft.Json
             using (var client = new HttpClient())
             {
-                var response = client.GetAsync("https://trials-api17.herokuapp.com/Platform/Destiny/2/Account/" + mId).Result;
+                client.DefaultRequestHeaders.Add("X-API-Key", apiKey);
+                var response = client.GetAsync("https://www.bungie.net/platform/Destiny/2/Account/" + mId).Result;
                 var content = response.Content.ReadAsStringAsync().Result;
                 dynamic item = Newtonsoft.Json.JsonConvert.DeserializeObject(content);
 
@@ -164,6 +180,21 @@ namespace TestElo
         static void getActivities(string mId, string cId, string count = "1") //cid = charachterId, count = number of activities ordered by date (1 = get latest)
         {
             //GET https://trials-api14.herokuapp.com/Platform/Destiny/Stats/ActivityHistory/2/4611686018437777945/2305843009263206187/?mode=14&count=1&lc=en
+        }
+
+        static async Task<string> getBungieActivites(string mId, string cId, string mode = "14", string count = "1", string page = "0")
+        {
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("X-API-Key", apiKey);
+                string url = "https://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/2/" + mId + "/" + cId + "/?mode=" + mode + "&page=" + page + "&count=" + count;
+                var response = await client.GetAsync(url);
+                var content = await response.Content.ReadAsStringAsync();
+                //dynamic item = Newtonsoft.Json.JsonConvert.DeserializeObject(content);
+
+                return content;
+                //Console.WriteLine(item.Response.data.inventoryItem.itemName); //Gjallarhorn
+            }
         }
 
         #region Retrieve SQL Data

@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestElo", "TestElo\TestElo.csproj", "{81591E50-23D1-446A-BB91-39129324F518}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DestinyDataDB", "DestinyData\DestinyDataDB.sqlproj", "{8144E11F-6EDE-4397-9F5E-AEE7BE6C381C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestElo.DataLayer", "TestElo.DataLayer\TestElo.DataLayer.csproj", "{6735607F-CD49-4DAB-BD34-D914CF19131B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +17,10 @@ Global
 		{81591E50-23D1-446A-BB91-39129324F518}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81591E50-23D1-446A-BB91-39129324F518}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81591E50-23D1-446A-BB91-39129324F518}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8144E11F-6EDE-4397-9F5E-AEE7BE6C381C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8144E11F-6EDE-4397-9F5E-AEE7BE6C381C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8144E11F-6EDE-4397-9F5E-AEE7BE6C381C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{8144E11F-6EDE-4397-9F5E-AEE7BE6C381C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8144E11F-6EDE-4397-9F5E-AEE7BE6C381C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8144E11F-6EDE-4397-9F5E-AEE7BE6C381C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6735607F-CD49-4DAB-BD34-D914CF19131B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6735607F-CD49-4DAB-BD34-D914CF19131B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6735607F-CD49-4DAB-BD34-D914CF19131B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6735607F-CD49-4DAB-BD34-D914CF19131B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

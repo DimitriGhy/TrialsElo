@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EloMiningModelStoreContainer" CdmEntityContainer="EloMiningEntities">
+    <EntitySetMapping Name="EloHistory">
+      <EntityTypeMapping TypeName="EloMiningModel.EloHistory">
+        <MappingFragment StoreEntitySet="EloHistory">
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="Elo" ColumnName="Elo" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MembershipId" ColumnName="MembershipId" />
+        </MappingFragment>
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="MembershipId" ColumnName="MembershipId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="EloMiningModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="MembershipId" ColumnName="MembershipId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="ClanName" ColumnName="ClanName" />
+          <ScalarProperty Name="ClanTag" ColumnName="ClanTag" />
+          <ScalarProperty Name="Elo" ColumnName="Elo" />
+          <ScalarProperty Name="Kills" ColumnName="Kills" />
+          <ScalarProperty Name="Assists" ColumnName="Assists" />
+          <ScalarProperty Name="Deaths" ColumnName="Deaths" />
+          <ScalarProperty Name="GamesPlayed" ColumnName="GamesPlayed" />
+          <ScalarProperty Name="TimePlayed" ColumnName="TimePlayed" />
+          <ScalarProperty Name="MembershipType" ColumnName="MembershipType" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
