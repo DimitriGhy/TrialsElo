@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TestElo\TestElo.csproj">
-      <Project>{81591e50-23d1-446a-bb91-39129324f518}</Project>
-      <Name>TestElo</Name>
+    <ProjectReference Include="..\TestElo.Model\TestElo.Model.csproj">
+      <Project>{df05954d-dac6-4285-a3c5-fab569f75d31}</Project>
+      <Name>TestElo.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

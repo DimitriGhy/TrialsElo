@@ -57,9 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Account.cs" />
-    <Compile Include="Model\Activity.cs" />
-    <Compile Include="Model\Character.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response.cs" />
@@ -70,7 +67,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Enums\" />
+    <ProjectReference Include="..\TestElo.DataLayer\TestElo.DataLayer.csproj">
+      <Project>{6735607f-cd49-4dab-bd34-d914cf19131b}</Project>
+      <Name>TestElo.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestElo.Model\TestElo.Model.csproj">
+      <Project>{df05954d-dac6-4285-a3c5-fab569f75d31}</Project>
+      <Name>TestElo.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

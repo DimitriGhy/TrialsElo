@@ -11,6 +11,7 @@ namespace TestElo.Model
     public class Activity
     {
         #region properties
+        [Key]
         public int ReferenceId { get; set; }
         public virtual Character Character { get; set; }
         [Key, ForeignKey("Account")]

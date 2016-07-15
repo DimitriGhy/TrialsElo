@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestElo", "TestElo\TestElo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestElo.DataLayer", "TestElo.DataLayer\TestElo.DataLayer.csproj", "{6735607F-CD49-4DAB-BD34-D914CF19131B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestElo.Model", "TestElo.Model\TestElo.Model.csproj", "{DF05954D-DAC6-4285-A3C5-FAB569F75D31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6735607F-CD49-4DAB-BD34-D914CF19131B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6735607F-CD49-4DAB-BD34-D914CF19131B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6735607F-CD49-4DAB-BD34-D914CF19131B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF05954D-DAC6-4285-A3C5-FAB569F75D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF05954D-DAC6-4285-A3C5-FAB569F75D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF05954D-DAC6-4285-A3C5-FAB569F75D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF05954D-DAC6-4285-A3C5-FAB569F75D31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using TestElo.DataLayer;
 
 namespace TestElo
 {
@@ -11,13 +12,19 @@ namespace TestElo
         const string rootPath = @"c:\users\public\TrialsElo\";
         const string apiKey = "489f18cf6b8c4881bc99c3776950538f";
 
-
+        static void testContext()
+        {
+            using (var context = new EloModelContext())
+            {
+                var result = context.Accounts;
+            }
+        }
         static void Main(string[] args)
         {
             string membershipId = "4611686018439432963";
             string characterId = "2305843009290018353";
 
-            var x = getBungieActivites(membershipId, characterId, trialsMode, "10", "0");
+            var x = getBungieActivites(membershipId, characterId, trialsMode, "250", "0");
 
 
             dynamic item = Newtonsoft.Json.JsonConvert.DeserializeObject(x.Result);

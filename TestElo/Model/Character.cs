@@ -12,6 +12,7 @@ namespace TestElo.Model
     public class Character
     {
         #region properties
+        [Key]
         public string CharacterId { get; set; }
 
         [Key, ForeignKey("Account")]
