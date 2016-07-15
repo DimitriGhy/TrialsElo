@@ -1,0 +1,12 @@
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\bin\Debug\TestElo.DataLayer.dll.config
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\bin\Debug\TestElo.DataLayer.dll
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\bin\Debug\TestElo.DataLayer.pdb
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\bin\Debug\TestElo.Model.dll
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\bin\Debug\TestElo.Model.pdb
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\obj\Debug\TestElo.DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\obj\Debug\TestElo.DataLayer.dll
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.DataLayer\obj\Debug\TestElo.DataLayer.pdb

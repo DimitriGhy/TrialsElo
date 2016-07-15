@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using TestElo.DataLayer;
@@ -216,6 +219,114 @@ namespace TestElo
 
             //get the history and save them to history.csv
 
+        }
+
+
+        static void RunAsync()
+        {
+            Stopwatch timePerParse;
+            double ticksAsync = 0, ticksNormal = 0;
+
+            //Async call
+            timePerParse = Stopwatch.StartNew();
+
+            //AsyncWorker worker = new AsyncWorker();
+            //worker.ProcessAsync().Wait();
+            MainAsync().Wait();
+
+            timePerParse.Stop();
+            ticksAsync = timePerParse.Elapsed.TotalSeconds;
+            Console.WriteLine($"Async run: {ticksAsync}");
+        }
+
+        public static async Task MainAsync()
+        {
+            ServicePointManager.DefaultConnectionLimit = 999999;
+
+            List<Task> allPages = new List<Task>();
+
+            for (int i = 0; i <= 10; i++)
+            {
+                var page = i;
+                allPages.Add(Task.Factory.StartNew(() => processLeaderboard(page)));
+            }
+
+            Task.WaitAll(allPages.ToArray());
+
+            Console.WriteLine("Finished Leaderboards");
+        }
+
+
+        public static async Task processLeaderboard(Int32 page)
+        {
+            List<Task> players = new List<Task>();
+            using (var client = new HttpClient())
+            {
+                //client.DefaultRequestHeaders.Add("X-API-Key", apiKey);
+                string url = "http://api.guardian.gg/leaderboard/2/" + trialsMode + "/" + page;
+                var response = client.GetAsync(url).Result;
+                var content = response.Content.ReadAsStringAsync().Result;
+                //var r = content.Result;
+                dynamic item = Newtonsoft.Json.JsonConvert.DeserializeObject(content);
+
+                dynamic data = item.data;
+                var localPage = page;
+                Console.WriteLine($"Processing Page: {localPage}");
+                foreach (dynamic d in data)
+                {
+                    players.Add(Task.Factory.StartNew(() => processGuardian(d, localPage)));
+                    //players.Add(processGuardian(d));
+                }
+            }
+
+            Task.WaitAll(players.ToArray());
+            Console.WriteLine($"Finished Page: {page}");
+        }
+
+
+        public static async Task processGuardian(dynamic player, int page)
+        {
+            using (var client = new HttpClient())
+            {
+                //client.DefaultRequestHeaders.Add("X-API-Key", apiKey);
+                string url = "https://api.destinytrialsreport.com/player/" + player.membershipId;
+                HttpResponseMessage response = null;
+                try
+                {
+                    response = client.GetAsync(url).Result;
+                }
+                catch
+                {
+                    var i = 0;
+                    while (i <= 5 && response != null)
+                    {
+                        response = client.GetAsync(url).Result;
+                    }
+                }
+                var content = await response.Content.ReadAsStringAsync();
+                //var r = content.Result;
+                dynamic item = Newtonsoft.Json.JsonConvert.DeserializeObject(content);
+
+                int totalFlawless = 0;
+                int flawlessYear1 = 0;
+                int flawlessYear2 = 0;
+
+                dynamic thisWeek = item[0].thisWeek;
+                dynamic flawless = item[0].flawless;
+                if (flawless.Count == null || flawless.Count > 0)
+                {
+                    dynamic years = flawless.years;
+                    dynamic year1 = years["1"];
+                    dynamic year2 = years["2"];
+                    if (year1 != null)
+                        flawlessYear1 = year1.count;
+                    if (year2 != null)
+                        flawlessYear2 = year2.count;
+                }
+                totalFlawless = flawlessYear1 + flawlessYear2;
+                
+                Console.WriteLine($"{page}: Processed {player.name}");
+            }
         }
     }
 }

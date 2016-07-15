@@ -26,3 +26,7 @@ C:\Users\Dimitri\Source\Repos\EloMining\TestElo\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo\obj\Debug\TestElo.exe
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo\obj\Debug\TestElo.pdb
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo\obj\Debug\TestElo.csprojResolveAssemblyReference.cache
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo\bin\Debug\TestElo.exe.config
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo\obj\Debug\TestElo.exe
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo\obj\Debug\TestElo.pdb
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo\obj\Debug\TestElo.csprojResolveAssemblyReference.cache

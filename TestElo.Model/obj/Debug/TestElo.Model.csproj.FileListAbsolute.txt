@@ -8,3 +8,13 @@ C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\bin\Debug\EntityFramework.
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\obj\Debug\TestElo.Model.csprojResolveAssemblyReference.cache
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\obj\Debug\TestElo.Model.dll
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\obj\Debug\TestElo.Model.pdb
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.Model\bin\Debug\TestElo.Model.dll.config
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.Model\bin\Debug\TestElo.Model.dll
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.Model\bin\Debug\TestElo.Model.pdb
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.Model\bin\Debug\EntityFramework.dll
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.Model\bin\Debug\EntityFramework.xml
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.Model\obj\Debug\TestElo.Model.csprojResolveAssemblyReference.cache
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.Model\obj\Debug\TestElo.Model.dll
+C:\Users\chris\OneDrive\DEVtalk\Projects\TrialsElo\TestElo.Model\obj\Debug\TestElo.Model.pdb
