@@ -14,8 +14,12 @@ namespace TestElo.Model
         [Key]
         public int ReferenceId { get; set; }
         public virtual Character Character { get; set; }
-        [Key, ForeignKey("Account")]
+        [ForeignKey("Character")]
         public string CharacterId { get; set; }
+
+        [ForeignKey("Account")]
+        public string MembershipId { get; set; }
+        public virtual Account Account { get; set; }
 
         public DateTime Period { get; set; }
 

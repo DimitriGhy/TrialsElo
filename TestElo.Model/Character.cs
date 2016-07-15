@@ -15,7 +15,7 @@ namespace TestElo.Model
         [Key]
         public string CharacterId { get; set; }
 
-        [Key, ForeignKey("Account")]
+        [ForeignKey("Account")]
         public string MembershipId { get; set; }
 
         public int ReferenceId { get; set; }
@@ -26,10 +26,10 @@ namespace TestElo.Model
         public DateTime ModifiedOn { get; set; }
         public decimal TrialsElo { get; set; }
         #endregion
-
+        public ICollection<Activity> Activities { get; set; }
         public Character()
         {
-
+            Activities = new List<Activity>();
         }
 
     }

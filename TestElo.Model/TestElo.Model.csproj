@@ -52,7 +52,6 @@
     <Compile Include="Account.cs" />
     <Compile Include="Activity.cs" />
     <Compile Include="Character.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

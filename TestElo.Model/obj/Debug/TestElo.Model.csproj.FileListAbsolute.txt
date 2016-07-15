@@ -5,6 +5,5 @@ C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\bin\Debug\EntityFramework.
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\bin\Debug\EntityFramework.xml
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\obj\Debug\TestElo.Model.csprojResolveAssemblyReference.cache
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\obj\Debug\TestElo.Model.dll
 C:\Users\Dimitri\Source\Repos\EloMining\TestElo.Model\obj\Debug\TestElo.Model.pdb

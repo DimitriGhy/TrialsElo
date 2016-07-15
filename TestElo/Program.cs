@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using TestElo.DataLayer;
+using TestElo.Model;
 
 namespace TestElo
 {
@@ -16,18 +18,22 @@ namespace TestElo
         {
             using (var context = new EloModelContext())
             {
-                var result = context.Accounts;
+                var accounts = context.Accounts.ToList();
+                var result = context.Accounts.Add(new Model.Account(){MembershipId="test" });
+                context.SaveChanges();
+                
             }
         }
         static void Main(string[] args)
         {
+            //testContext();
             string membershipId = "4611686018439432963";
             string characterId = "2305843009290018353";
 
-            var x = getBungieActivites(membershipId, characterId, trialsMode, "250", "0");
+            var x = getBungieActivites(membershipId, characterId, trialsMode, "1", "0");  
 
 
-            dynamic item = Newtonsoft.Json.JsonConvert.DeserializeObject(x.Result);
+            var acc = Newtonsoft.Json.JsonConvert.DeserializeObject(x.Result);
 
 
 
