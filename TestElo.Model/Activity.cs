@@ -5,14 +5,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestElo.Model.JsonResponse;
 
 namespace TestElo.Model
 {
     public class Activity
     {
         #region properties
-        [Key]
-        public int ReferenceId { get; set; }
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string InstanceId { get; set; }
+
+        public long ReferenceId { get; set; }
         public virtual Character Character { get; set; }
         [ForeignKey("Character")]
         public string CharacterId { get; set; }
@@ -23,7 +26,6 @@ namespace TestElo.Model
 
         public DateTime Period { get; set; }
 
-        public string InstanceId { get; set; }
         public int Mode { get; set; }
         public int Assists { get; set; }
         public int Score { get; set; }
@@ -31,7 +33,7 @@ namespace TestElo.Model
         public decimal AverageScorePerKill { get; set; }
         public int Deaths { get; set; }
         public decimal AverageScorePerLife { get; set; }
-        public bool Completed { get; set; }
+        public string Completed { get; set; }
         public decimal KillsDeathsRatio { get; set; }
         public decimal KillsDeathsAssists { get; set; }
         public decimal ActivityDurationSeconds { get; set; }
@@ -49,5 +51,6 @@ namespace TestElo.Model
         {
 
         }
+
     }
 }

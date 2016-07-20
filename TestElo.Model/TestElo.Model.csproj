@@ -52,11 +52,16 @@
     <Compile Include="Account.cs" />
     <Compile Include="Activity.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="Converters\AccountConverter.cs" />
+    <Compile Include="Converters\ActivityConverter.cs" />
+    <Compile Include="Converters\CharacterConverter.cs" />
+    <Compile Include="Enums\Enums.cs" />
+    <Compile Include="JsonResponse\DestinyActivity.cs" />
+    <Compile Include="JsonResponse\ResponseDestinyCharacters.cs" />
+    <Compile Include="JsonResponse\ResponseTrialsReportLeaderBoardAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

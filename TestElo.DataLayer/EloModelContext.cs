@@ -10,8 +10,8 @@ namespace TestElo.DataLayer
 {
     public class EloModelContext:DbContext
     {
-        public DbSet<Account> Accounts { get; set; }
-        public DbSet<Character> Characters { get; set; }
-        public DbSet<Activity> Activities { get; set; }
+        public IDbSet<Account> Accounts { get; set; }
+        public IDbSet<Character> Characters { get; set; }
+        public IDbSet<Activity> Activities { get; set; }
     }
 }
